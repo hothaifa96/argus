@@ -14,7 +14,7 @@ pipeline{
             steps{
                 echo "========executing A========"
                 sh "docker images"
-                sh "docker start this:latest"
+                sh "docker run this:latest"
                 sh "ls"
             }
         }
