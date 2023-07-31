@@ -13,7 +13,7 @@ pipeline{
             }
             steps{
                 echo "========executing A========"
-                sh "docker iamges"
+                sh "docker images"
                 sh "docker start this:latest"
                 sh "ls"
             }
