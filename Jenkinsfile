@@ -4,7 +4,7 @@ pipeline{
         stage("Build & Deploy"){
             steps{
                 echo "========executing A========"
-                sh "sudo docker build -t this ."
+                sh "docker build -t demo ."
             }
         }
         stage("Pull & Test"){
@@ -13,7 +13,8 @@ pipeline{
             }
             steps{
                 echo "========executing A========"
-                sh "sudo docker start this"
+                sh "docker iamges"
+                sh "docker start this:latest"
                 sh "ls"
             }
         }
