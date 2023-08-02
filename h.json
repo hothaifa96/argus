@@ -1,0 +1,162 @@
+[
+    {
+        "Id": "sha256:fd0969e5ad2f9500dc8a04c02f2cbeaff86535cbcac2dc1fedd3df2cf262120f",
+        "RepoTags": [
+            "161192472568.dkr.ecr.us-east-1.amazonaws.com/jenkins-controller:latest"
+        ],
+        "RepoDigests": [
+            "161192472568.dkr.ecr.us-east-1.amazonaws.com/jenkins-controller@sha256:6e2c7e6b0439d9d2cdedd7d82bada2f05f5fa202f84b98c28d822bf6a5b22ff0"
+        ],
+        "Parent": "",
+        "Comment": "",
+        "Created": "2023-05-23T12:05:50.560313605Z",
+        "Container": "f03d3284383462919c1f0ce2db9b4a6a7a6e8590c4747ee0feeb0a3e4b87c8ae",
+        "ContainerConfig": {
+            "Hostname": "f03d32843834",
+            "Domainname": "",
+            "User": "jenkins",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "50000/tcp": {},
+                "8080/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "JENKINS_HOME=/var/jenkins_home",
+                "JENKINS_SLAVE_AGENT_PORT=50000",
+                "REF=/usr/share/jenkins/ref",
+                "JENKINS_VERSION=2.387.3",
+                "JENKINS_UC=https://updates.jenkins.io",
+                "JENKINS_UC_EXPERIMENTAL=https://updates.jenkins.io/experimental",
+                "JENKINS_INCREMENTALS_REPO_MIRROR=https://repo.jenkins-ci.org/incrementals",
+                "COPY_REFERENCE_FILE_LOG=/var/jenkins_home/copy_reference_file.log",
+                "JAVA_HOME=/opt/java/openjdk"
+            ],
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "#(nop) ",
+                "USER jenkins"
+            ],
+            "Image": "sha256:f97853b996999957170e4882df39e6cd8718aaf701130316b2e0d520ae606ca8",
+            "Volumes": {
+                "/var/jenkins_home": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/usr/bin/tini",
+                "--",
+                "/usr/local/bin/jenkins.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "org.opencontainers.image.description": "The Jenkins Continuous Integration and Delivery server",
+                "org.opencontainers.image.licenses": "MIT",
+                "org.opencontainers.image.revision": "ca53c743e9e83db0cd235723e6689cd1490e1d13",
+                "org.opencontainers.image.source": "https://github.com/jenkinsci/docker",
+                "org.opencontainers.image.title": "Official Jenkins Docker image",
+                "org.opencontainers.image.url": "https://www.jenkins.io/",
+                "org.opencontainers.image.vendor": "Jenkins project",
+                "org.opencontainers.image.version": "2.387.3"
+            }
+        },
+        "DockerVersion": "20.10.21",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "jenkins",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "50000/tcp": {},
+                "8080/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "JENKINS_HOME=/var/jenkins_home",
+                "JENKINS_SLAVE_AGENT_PORT=50000",
+                "REF=/usr/share/jenkins/ref",
+                "JENKINS_VERSION=2.387.3",
+                "JENKINS_UC=https://updates.jenkins.io",
+                "JENKINS_UC_EXPERIMENTAL=https://updates.jenkins.io/experimental",
+                "JENKINS_INCREMENTALS_REPO_MIRROR=https://repo.jenkins-ci.org/incrementals",
+                "COPY_REFERENCE_FILE_LOG=/var/jenkins_home/copy_reference_file.log",
+                "JAVA_HOME=/opt/java/openjdk"
+            ],
+            "Cmd": null,
+            "Image": "sha256:f97853b996999957170e4882df39e6cd8718aaf701130316b2e0d520ae606ca8",
+            "Volumes": {
+                "/var/jenkins_home": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/usr/bin/tini",
+                "--",
+                "/usr/local/bin/jenkins.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "org.opencontainers.image.description": "The Jenkins Continuous Integration and Delivery server",
+                "org.opencontainers.image.licenses": "MIT",
+                "org.opencontainers.image.revision": "ca53c743e9e83db0cd235723e6689cd1490e1d13",
+                "org.opencontainers.image.source": "https://github.com/jenkinsci/docker",
+                "org.opencontainers.image.title": "Official Jenkins Docker image",
+                "org.opencontainers.image.url": "https://www.jenkins.io/",
+                "org.opencontainers.image.vendor": "Jenkins project",
+                "org.opencontainers.image.version": "2.387.3"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 1462225163,
+        "VirtualSize": 1462225163,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/874258a0037a3d10808e6b3ad53152abb2780cfe508787e3d22a14a73875d2fa/diff:/var/lib/docker/overlay2/134f31590bfd439c1ef74eceeed0dfe9482eda714daf2394f3e2b20753e97479/diff:/var/lib/docker/overlay2/928a3b692fc0d29c7a034c6d9a4a26187b993dbdd90535d27f149d618bd1971b/diff:/var/lib/docker/overlay2/5686d127ca2faceb65f8b6ee615e20c8396b8897b584a93876c756a1dcef643a/diff:/var/lib/docker/overlay2/1e2f46d431ecc456168de31b70d85df8e833c5aa7391eff10dea4a5b7597e3f2/diff:/var/lib/docker/overlay2/4d1c8c6b1ac3b7e358093d24e28ca041a1714066efd5dc9432f27e39cce1fea8/diff:/var/lib/docker/overlay2/cdd69efcbf008210dc534d7b68212252b6e11eacad3b8720ac7f4889f7f0d845/diff:/var/lib/docker/overlay2/850146b3845b2ac9a8f243eb7c3153679bfca9e3f9ffad8ead8f60ccfee6bc6b/diff:/var/lib/docker/overlay2/48eccfabf374e3603ac25fe0b4d2d9be36bfea9b73be1822a4ca3b7e9618524f/diff:/var/lib/docker/overlay2/0f1510eaa603bbf4c930fcb2b3324139d5267a5f4f43ed74efc9976b6acdf448/diff:/var/lib/docker/overlay2/7d645f5ca715fe31836bb2dd09beb9048663284ebb1008e06536f4983ad6fbfa/diff:/var/lib/docker/overlay2/3c09ca0cb58e778363e5e8f5228ff8217e05c5ef3683794a52b2113fd18e6c98/diff:/var/lib/docker/overlay2/453105ca92db1c4b1d56ba55265fae2a9355e8ed9fec63375a743425e559a424/diff:/var/lib/docker/overlay2/8d5f020716036786b3c1fa290a7942aa8f274cdaea1db637948c9b925e4c6951/diff:/var/lib/docker/overlay2/70faf8720043fe3ccdcfd610e4b1e974ecde810d5378636bfd0c14b6cbc263c5/diff:/var/lib/docker/overlay2/79abc1880e63a2731b5a0f64f8f4a9d68795aeaa643ec3677380ac92cfb47b6a/diff:/var/lib/docker/overlay2/0b95634b3367f9b9c0bdb868c96c225db5effd0d8a2c8e723d53850d49ac09a6/diff:/var/lib/docker/overlay2/87c7f27a338a76c04e476bc31bf7d77083333880747a446cbe09cd327b0fac6f/diff",
+                "MergedDir": "/var/lib/docker/overlay2/4fa2df495a8c69481a5b90a90483bb7a26c99cb783151c1454bf75156321714c/merged",
+                "UpperDir": "/var/lib/docker/overlay2/4fa2df495a8c69481a5b90a90483bb7a26c99cb783151c1454bf75156321714c/diff",
+                "WorkDir": "/var/lib/docker/overlay2/4fa2df495a8c69481a5b90a90483bb7a26c99cb783151c1454bf75156321714c/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:ae56c0c5405b3d38a59b5ec5dfe5db36e8b6ff6ca8595851f903cde13e709282",
+                "sha256:3fb287e008f8fff0b4adcaf1b8181c7edb69effb354379168de6a7d1da0f70a9",
+                "sha256:7de19ea2fded83664508cfcdd0f96cc84092c1a4ec5013b2be21e38feb15a1d1",
+                "sha256:3811da88389583cdd7471a30e2c603a96bdf11cf957335e32ce72f99acff3c59",
+                "sha256:7b8f9d0c670c747a54f4a45c25e190871182ed2f7ab1bb48f8b63f7751e05848",
+                "sha256:56b018284c58dce1fbf6bc4229f5444aae238f1fa4429e71075e5f2c62f67c31",
+                "sha256:6a45b66c291b21a131b5f5f591ac407036494d2687a1831e93470bb468a3c73d",
+                "sha256:67ac8a362561a41723e917b8256bb51c2f1b52486a23301405804448d7dc6f76",
+                "sha256:d90c97aff719859bac876257579e47345c2402baed2328fcd76a0f2be0501592",
+                "sha256:ba66619e71decbeff211b465844afdbe1a8d1b016b675dd2bf32fba1cc59d775",
+                "sha256:12e639a5a7ea3746cebd97fd76e58b5cc7aa3cf3c51ac8bac30231085974c614",
+                "sha256:e2cf45412e4b5a0db2d91f097d04fd157316b8f1ff881309db9f709c80aee3d8",
+                "sha256:ddabbb0c670a7aa5d07bb07c01dcba17d0b4a34ce3b13c6fa69b0dab81f35845",
+                "sha256:edf14c18abe5f067d80a6a3ebbe2a7bf1f4580c15a9e0a287f7a6e8e701259b8",
+                "sha256:13b4060025c0e2f72571a873b184dfa49012ab711c0657ebf5e55d2aec2dff77",
+                "sha256:4602d90e3a019ab5bc587107baf68e46a18c40bd752765330853480678729a68",
+                "sha256:d5732a9b879e30e9f1e243d82ab9ccee8937f4752c29126814e2aeac22b6841f",
+                "sha256:53f64eca0e5e3858e42371a70932c66b1be4de807397e1e14e3788e7907c9c7a",
+                "sha256:a31df8b42ec7cac17c72bdfa6ed19b2eb3d09961ccc1fdeaa246acb5b44ed566"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]
