@@ -9,7 +9,7 @@ pipeline{
         }
         stage("Pull & Test"){
              when {
-                expression { return params.MANUAL_STAGE == 'Test' || cron 'H 17 * * *' }
+                expression { return params.MANUAL_STAGE == 'Test' || cron('H 17 * * *') }
             }
             steps{
                 echo "========executing A========"
