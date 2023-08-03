@@ -20,7 +20,7 @@ pipeline{
                 // sh "docker push ${ECR_REGISTRY}/${IMAGE_NAME}:${IMAGE_VERSION}"
                 
                 aws.withAWS(credentials: 'aws-credentials', region: AWS_REGION) {
-               {
+               
                     sh "aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ECR_REGISTRY}"
                     sh "docker tag ${IMAGE_NAME}:${IMAGE_VERSION} ${ECR_REGISTRY}/${IMAGE_NAME}:${IMAGE_VERSION}"
                     sh "docker push ${ECR_REGISTRY}/${IMAGE_NAME}:${IMAGE_VERSION}"
@@ -38,5 +38,5 @@ pipeline{
             }
         }
     }
-    
+ 
 }
