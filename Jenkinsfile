@@ -15,9 +15,17 @@ pipeline{
                     docker.build("${env.IMAGE_NAME}:${IMAGE_VERSION}",".")
                     docker.image("${env.IMAGE_NAME}:${IMAGE_VERSION}").run()
                 }
-                sh "aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ECR_REGISTRY}"
-                sh "docker tag ${IMAGE_NAME}:${IMAGE_VERSION} ${ECR_REGISTRY}/${IMAGE_NAME}"
-                sh "docker push ${ECR_REGISTRY}/${IMAGE_NAME}:${IMAGE_VERSION}"
+                // sh "aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ECR_REGISTRY}"
+                // sh "docker tag ${IMAGE_NAME}:${IMAGE_VERSION} ${ECR_REGISTRY}/${IMAGE_NAME}"
+                // sh "docker push ${ECR_REGISTRY}/${IMAGE_NAME}:${IMAGE_VERSION}"
+                
+                withCredentials([
+                    usernamePassword(credentialsId: 'jenkins-aws-cli', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY')
+                ]) {
+                    sh "aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ECR_REGISTRY}"
+                    sh "docker tag ${IMAGE_NAME}:${IMAGE_VERSION} ${ECR_REGISTRY}/${IMAGE_NAME}:${IMAGE_VERSION}"
+                    sh "docker push ${ECR_REGISTRY}/${IMAGE_NAME}:${IMAGE_VERSION}"
+                }
             }
         }
         stage("Pull & Test"){
