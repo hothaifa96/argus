@@ -2,7 +2,7 @@ pipeline{
     agent any
     environment {
 
-        IMAGE_NAME = "${argus}:"
+        IMAGE_NAME = "${env.GIT_BRANCH.toLowerCase()}"
         IMAGE_VERSION = "${env.BUILD_ID}"
         AWS_REGION = 'us-east-1' 
         ECR_REGISTRY = '161192472568.dkr.ecr.us-east-1.amazonaws.com/hothaifa'
