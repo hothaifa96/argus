@@ -7,7 +7,9 @@ pipeline{
     stages{
         stage("Build & Deploy"){
             steps{
-                docker.build("${env.IMAGE_NAME}",".")
+                script {
+                    docker.build("${env.IMAGE_NAME}",".")
+                }
             }
         }
         stage("Pull & Test"){
@@ -15,7 +17,9 @@ pipeline{
                 expression { return params.MANUAL_STAGE == 'Test' || cron('H 17 * * *') }
             }
             steps{
-                docker.image("${env.IMAGE_NAME}").run()
+                script {
+                    docker.image("${env.IMAGE_NAME}").run()
+                }
             }
         }
     }
