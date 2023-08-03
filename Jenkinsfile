@@ -20,8 +20,8 @@ pipeline{
                 // sh "docker push ${ECR_REGISTRY}/${IMAGE_NAME}:${IMAGE_VERSION}"
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'jenkins-aws-cli']]) {
                     sh "aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ECR_REGISTRY}"
-                    sh "docker tag ${IMAGE_NAME}:${IMAGE_VERSION} ${ECR_REGISTRY}/${IMAGE_NAME}:${IMAGE_VERSION}"
-                    sh "docker push ${ECR_REGISTRY}/${IMAGE_NAME}:${IMAGE_VERSION}"
+                    sh "docker tag ${IMAGE_NAME}:${IMAGE_VERSION} ${ECR_REGISTRY}"
+                    sh "docker push ${ECR_REGISTRY}:${IMAGE_VERSION}"
                 }
             }
         }
